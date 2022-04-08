@@ -1,0 +1,40 @@
+
+// Flexbox
+@mixin flex($main: flex-start, $cross: stretch, $direction: row, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $main;
+    align-items: $cross;
+    flex-wrap: $wrap;
+}
+
+// Grid
+@mixin grid($columns: auto, $rows: auto, $gap: 0 0, $justify: stretch, $align: stretch, $auto-rows: auto) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    justify-items: $justify;
+    align-items: $align;
+    grid-auto-rows: $auto-rows;
+    gap: $gap;
+
+}
+
+// Centered Container
+@mixin container($width: 120rem, $margin: 0, $padding: 0 1rem) {
+    max-width: $width;
+    margin: $margin auto;
+    padding: $padding;
+}
+
+// Screen reader
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

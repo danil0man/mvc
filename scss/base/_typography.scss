@@ -1,0 +1,131 @@
+$font-base: 1.8rem;
+$ratio: 1.333;
+$mobile-base: 1.6rem;
+$mobile-ratio: 1.2;
+
+h1 {
+    font-size: #{calculate-font($font-base, $ratio, 6)};
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: #{calculate-font($font-base, $ratio, 5)};
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: #{calculate-font($font-base, $ratio, 4)};
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: #{calculate-font($font-base, $ratio, 3)};
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: #{calculate-font($font-base, $ratio, 2)};
+    line-height: 1.3;
+}
+
+.blockquote {
+    font-size: #{calculate-font($font-base, $ratio, 1)};
+    line-height: 1.5;
+}
+
+h6,
+p {
+    font-size: $font-base;
+    line-height: 1.75;
+}
+
+caption {
+    font-size: #{calculate-font($font-base, $ratio, -1)};
+    line-height: 1.75;
+}
+
+.footnote {
+    font-size: #{calculate-font($font-base, $ratio, -2)};
+    line-height: 2;
+}
+
+// Mobile Phone
+@include sm {
+    h1 {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                6
+            )};
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                5
+            )};
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                4
+            )};
+        line-height: 1.3;
+    }
+
+    h4 {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                3
+            )};
+        line-height: 1.3;
+    }
+
+    h5 {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                2
+            )};
+        line-height: 1.3;
+    }
+
+    .blockquote {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                1
+            )};
+        line-height: 1.5;
+    }
+
+    h6,
+    p {
+        font-size: $mobile-base;
+        line-height: 1.75;
+    }
+
+    caption {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                -1
+            )};
+        line-height: 1.75;
+    }
+
+    .footnote {
+        font-size: #{calculate-font(
+                $mobile-base,
+                $mobile-ratio,
+                -2
+            )};
+        line-height: 2;
+    }
+}

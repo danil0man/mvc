@@ -2,7 +2,16 @@
 
 {% block title %}Home Page{% endblock %}
 
+{% block header %}
+
+<header class="header">
+    <h1 class="header__title">Welcome to MVC course</h1>
+    <img src="{{ asset('img/mvc.png')}}" alt="mvc" class="header__img">
+</header>
+ 
+{% endblock %}
+
 {% block body %}
-<h1> Welcome to the page </h1>
+
 
 {% endblock %}

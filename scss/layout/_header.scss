@@ -1,0 +1,24 @@
+.header {
+    @include flex(
+        $main: center,
+        $cross: center,
+        $direction: column
+    );
+
+    &__title {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 6rem;
+        font-family: $title-font;
+    }
+
+    &__img {
+        margin-top: 2rem;
+        width: 80rem;
+        height: auto;
+        @include sm {
+            margin-top: 4rem;
+            width: 100%;
+        }
+    }
+}

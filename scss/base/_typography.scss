@@ -1,5 +1,7 @@
-$font-base: 1.8rem;
-$ratio: 1.333;
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans&display=swap');
+
+$font-base: 1.6rem;
+$ratio: 1.25;
 $mobile-base: 1.6rem;
 $mobile-ratio: 1.2;
 
@@ -34,7 +36,8 @@ h5 {
 }
 
 h6,
-p {
+p,
+a {
     font-size: $font-base;
     line-height: 1.75;
 }

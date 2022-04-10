@@ -1,0 +1,25 @@
+.report {
+    &__container {
+        @include container($width: 95rem);
+        margin-bottom: 3rem;
+    }
+
+    &__heading {
+        text-align: center;
+        font-family: $title-font;
+    }
+}
+
+.fraga {
+    padding: 1rem 0 0;
+    border-bottom: 1px solid $color-accent;
+    font-family: $title-font;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.svar {
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: $para-font;
+}

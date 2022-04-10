@@ -58,3 +58,40 @@
         }
     }
 }
+
+.report {
+    @include container;
+    margin-top: 2rem;
+
+    &__navigation {
+        @include flex($main: space-between);
+        list-style: none;
+        @include sm {
+            @include flex(
+                $main: flex-start,
+                $direction: column
+            );
+            text-align: center;
+        }
+    }
+
+    &__item {
+        padding: 0 2rem;
+        @include sm {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: $para-font;
+        transition: all 0.5s;
+        &:hover {
+            color: darken($color-accent, 10%);
+            text-shadow: 0.2rem 0.5rem 1rem
+                rgba(0, 0, 0, 0.5);
+        }
+    }
+}

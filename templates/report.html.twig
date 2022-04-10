@@ -2,7 +2,58 @@
 
 {% block title %}Report Page{% endblock %}
 
+
+{% block header %}
+<header class="header">
+    <h1 class="header__title"> Report Page </h1>
+    <nav class="report">
+        <ul class="report__navigation">
+            <li class="report__item"><a href="#kmom01" class="report__link">Kmom01</a></li>
+            <li class="report__item"><a href="#kmom02" class="report__link">Kmom02</a></li>
+            <li class="report__item"><a href="#kmom03" class="report__link">Kmom03</a></li>
+            <li class="report__item"><a href="#kmom04" class="report__link">Kmom04</a></li>
+            <li class="report__item"><a href="#kmom05" class="report__link">Kmom05</a></li>
+            <li class="report__item"><a href="#kmom06" class="report__link">Kmom06</a></li>
+            <li class="report__item"><a href="#kmom07" class="report__link">Kmom 07- 10</a></li>
+    </ul>
+</nav>
+</header>
+
+{% endblock %}
+
 {% block body %}
-<h1> Report Page </h1>
+    <div class="report__container">
+        <section class="report__area" id="kmom01">
+            <h2 class="report__heading">Kmom01</h2>
+            <h3 class="fraga">Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering.</h3>
+            <p class="svar">The only prior experience I had with OOP was with the OOPython Course. I think I understand the idea behind Objects and creating code that is more reusable and more DRY. But I still have difficulty understanding concepts like classes connected to each other. I also have difficulty understanding "this" and when to use it correctly. I do understand methods and attributes, the public and private. But is not as clear yet how everything works in OOP.</p>
+            <h3 class="fraga">Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?</h3>
+            <p class="svar">Just a basic understanding on declaring a class. Methods and attributes. Is also important to understand the "new" which is only creating an instance of that class</p>
+            <h3 class="fraga">Reflektera kort över den kodbas, koden, strukturen som användes till uppgiften me/report, hur uppfattar du den?</h3>
+            <p class="svar">I think I understand some of the MVC patterns that we are using. For example, all the logic we want in our code should be in the controllers (C). Not only that but also the routing to the different pages. The View (V) is created using twig files, which are templates for the information we want to display later on. By creating files with twig we can modify single files and not repeat ourselves since the code will be different depending on the twig. Last is the Model (M) We have not touched the model yet but I think this is the actual data in the database which we can dynamically create together with the templates. I think that for small projects this pattern can be overkill, but as a page becomes more advanced and more code is need it, this pattern can be great. Not only the code will be easier to maintain and debug, but it will save a lot of time and the code will be more DRY.</p>
+            <h3 class="fraga">Med tanke på artikeln “PHP The Right Way”, vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om? Lyft fram några delar av artikeln som du känner mer värdefulla.</h3>
+            <p class="svar">The part that I found interesting and that I will like to know more about PHP is the connection to the database. Have more control over managing databases like SQL with ease using PHP code and PDO Extensions. We barely touched on it on webtec but I would like to know more. Another aspect I found super interesting is Security and how to better protect our pages from malicious agents. Not only on our page but also in protecting databases and users.</p>
+            <h3 class="fraga">Vilken är din TIL för detta kmom?</h3>
+            <p class="svar">In this kmom I learned about frameworks and how they can better help us to create code with ease and speed. Letting us focus on the important things instead of spending time creating things like routers or the need to make lots of code for it to work. I just barely have touch symfony but I do like so far the capabilities and the ease of creating modern web pages. </p>
+        </section>
+        <section class="report__area" id="kmom02">
+            <h2 class="report__heading">Kmom02</h2>
+        </section>
+        <section class="report__area" id="kmom03">
+            <h2 class="report__heading">Kmom03</h2>
+        </section>
+        <section class="report__area" id="kmom04">
+            <h2 class="report__heading">Kmom04</h2>
+        </section>
+        <section class="report__area" id="kmom05">
+            <h2 class="report__heading">Kmom05</h2>
+        </section>
+        <section class="report__area" id="kmom06">
+            <h2 class="report__heading">Kmom06</h2>
+        </section>
+        <section class="report__area" id="kmom07">
+            <h2 class="report__heading">Kmom07 - 10</h2>
+        </section>
+    </div>
 
 {% endblock %}

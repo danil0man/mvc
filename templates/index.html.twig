@@ -6,12 +6,27 @@
 
 <header class="header">
     <h1 class="header__title">Welcome to MVC course</h1>
-    <img src="{{ asset('img/mvc.png')}}" alt="mvc" class="header__img">
 </header>
- 
 {% endblock %}
 
 {% block body %}
+<section class="info">
+    <div class="info__container">
+        <img src="{{ asset('img/danny.jpg') }}" alt="picture of danny" class="info__image">
+        <div class="info__textarea">
+            <h2 class="info__title">Om Mig</h2>
+            <p class="info__text">Hej, <br> Mitt namn är Danny Castillo. Jag är född på Kuba men har bott i Sverige sedan 2001. Först bodde jag på Gotland nästan 13 år, men har pluggat i båda
+          Lund och Uppsala. Nyligen flyttade
+          tillsammans med
+          min fru till Oviken, nära Östersund där vi bor på en gård. Det är super härlig med skogpromenader och frisk luft.</p>
+            <p class="info__text">Mina intressen har alltid rör data användning. Från att spela spel till att rollspela online. Jag är stor Warhammer nörd. Började med programmering och kod
+          förra året och älskar det.
+          Varje gång man
+          fixar en problem eller lyckas att göra något häftig det blir sån skön rush.</p>
+            <p class="info__text">Ser fram emot att lära mig nya saker och att skriva fint kod. Efter studier är jag intresserad i Data analytics eller Cybersecurity. Har svårt att välja just nu sedan båda verkar vara väldig spännande, men att ha webbprogrammering som bakgrund tror jag kommer att hjälpa mig oavsett vad jag väljer.</p>
+        </div>
+
+</section>
 
 
 {% endblock %}

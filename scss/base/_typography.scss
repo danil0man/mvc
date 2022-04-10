@@ -2,8 +2,8 @@
 
 $font-base: 1.6rem;
 $ratio: 1.25;
-$mobile-base: 1.6rem;
-$mobile-ratio: 1.2;
+$mobile-base: 1.4rem;
+$mobile-ratio: 1.125;
 
 h1 {
     font-size: #{calculate-font($font-base, $ratio, 6)};
@@ -109,7 +109,8 @@ caption {
     }
 
     h6,
-    p {
+    p,
+    a {
         font-size: $mobile-base;
         line-height: 1.75;
     }

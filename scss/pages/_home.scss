@@ -1,0 +1,63 @@
+.info {
+    @include container($margin: 5rem auto 5rem);
+    @include sm {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    &__container {
+        @include grid($columns: 1fr 1fr, $justify: center);
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image {
+        width: 50rem;
+        height: auto;
+        border: 2px solid $color-black;
+        box-shadow: 1rem 1rem 1rem rgba($color-black, 0.5);
+        transition: 1s all;
+        &:hover {
+            transform: translateY(-1rem);
+            box-shadow: 1.5rem 1.5rem 2rem
+                rgba($color-black, 0.2);
+        }
+        @include sm {
+            width: 95%;
+            transition: none;
+            &:hover {
+                transform: none;
+                box-shadow: 1rem 1rem 1rem
+                    rgba($color-black, 0.5);
+            }
+        }
+    }
+
+    &__textarea {
+        @include flex(
+            $direction: column,
+            $main: space-evenly,
+            $cross: center
+        );
+        padding: 2rem;
+        border-top: 3px solid $color-accent;
+        border-bottom: 3px solid $color-accent;
+        @include sm {
+            border: none;
+            margin-top: 1rem;
+        }
+    }
+
+    &__title {
+        font-family: $title-font;
+        @include sm {
+            font-size: 4rem;
+        }
+    }
+
+    &__text {
+        padding: 2rem;
+        font-family: $para-font;
+    }
+}

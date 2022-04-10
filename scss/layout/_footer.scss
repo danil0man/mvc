@@ -1,0 +1,13 @@
+.footer {
+    @include flex($main: center, $cross: center);
+    text-align: center;
+    min-height: 5rem;
+    background-color: $color-black;
+    color: $color-white;
+    box-shadow: 0 0 0.4rem 0.2rem rgba($color-black, 0.4);
+
+    &__text {
+        font-family: $title-font;
+        font-size: 2rem;
+    }
+}

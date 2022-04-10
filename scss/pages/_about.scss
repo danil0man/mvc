@@ -1,0 +1,13 @@
+.about {
+    @include container;
+    padding: 2rem;
+
+    &__text {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-family: $para-font;
+        @include sm {
+            font-size: 1.6rem;
+        }
+    }
+}

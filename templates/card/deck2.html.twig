@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Card Deck{% endblock %}
+
+{% block header %}
+    <header>
+        <h1 class="header__title">Card Deck with Jokers</h1>
+    </header>
+{% endblock %}
+
+{% block body %}
+
+<div class="card__container">
+    {% for item in cardDeck %}
+        {% if item[1] == '♥' or item[1] == '♦' %}
+            {% if item[0] == '🃏' %}
+                <div class="card">
+                    <p class="card__red card__rank">Joker</p>
+                    <p class="card__red card__suit">{{item[0]}}</p>
+                </div>
+                {% else %}
+                <div class="card">
+                <p class="card__red card__rank">{{item[0]}}</p>
+                <p class="card__red card__suit">{{item[1]}}</p>
+            </div>
+            {% endif %}
+
+
+        {% else %}
+            {% if item[0] == '🃏' %}
+                <div class="card">
+                    <p class="card__black card__rank">Joker</p>
+                    <p class="card__black card__suit">{{item[0]}}</p>
+                </div>
+                {% else %}
+                <div class="card">
+                <p class="card__black card__rank">{{item[0]}}</p>
+                <p class="card__black card__suit">{{item[1]}}</p>
+            </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+{% endblock %}

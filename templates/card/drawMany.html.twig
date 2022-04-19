@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Draw Multiple Cards{% endblock %}
+
+{% block header %}
+    <header>
+        <h1 class="header__title">Draw Cards</h1>
+
+        <div class="card__container">
+            {% for card in cards %}
+                {% if card.suit == '♥' or card.suit == '♦' %}
+                    <div class="card">
+                        <p class="card__red card__rank">{{card.rank}}</p>
+                        <p class="card__red card__suit">{{card.suit}}</p>
+                    </div>
+            
+                {% else %}
+                    <div class="card">
+                        <p class="card__black card__rank">{{card.rank}}</p>
+                        <p class="card__black card__suit">{{card.suit}}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    </header>
+{% endblock %}
+
+{% block body %}
+
+
+
+<div class="card__container">
+
+    {% for item in cardDeck %}
+        {% if item[1] == '♥' or item[1] == '♦' %}
+            <div class="card">
+                <p class="card__red card__rank">{{item[0]}}</p>
+                <p class="card__red card__suit">{{item[1]}}</p>
+            </div>
+        {% else %}
+            <div class="card">
+                <p class="card__black card__rank">{{item[0]}}</p>
+                <p class="card__black card__suit">{{item[1]}}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+    </div>
+
+
+{% endblock %}

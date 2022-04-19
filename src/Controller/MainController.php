@@ -8,8 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    // Home Router
-    #[Route('/', name: 'app_main')]
+    /**
+    * @Route("/", name="index")
+    */
     public function index(): Response
     {
         return $this->render('index.html.twig', [
@@ -17,17 +18,10 @@ class MainController extends AbstractController
         ]);
     }
 
-    // About Router
-    #[Route('/about', name: 'app_about')]
-    public function about(): Response
-    {
-        return $this->render('about.html.twig', [
 
-        ]);
-    }
-
-    // Report Router
-    #[Route('/report', name: 'app_report')]
+     /**
+    * @Route("/report", name="report")
+    */
     public function report(): Response
     {
         return $this->render('report.html.twig', [

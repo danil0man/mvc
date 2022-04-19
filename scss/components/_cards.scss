@@ -1,0 +1,82 @@
+.card__container {
+    margin: 6rem 0;
+    padding: 2rem;
+    @include grid(
+        $columns: repeat(auto-fit, 100px),
+        $gap: 4rem
+    );
+    grid-auto-rows: 20rem;
+    justify-content: center;
+    @include sm {
+        gap: 2rem;
+    }
+
+    &--player {
+        margin: 1rem 0;
+    }
+}
+
+.card {
+    border: 1px solid black;
+    padding: 2rem;
+    min-width: 12rem;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s;
+
+    &__popped {
+        max-width: 7.8rem !important;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+    }
+    @include flex(
+        $direction: column,
+        $main: center,
+        $cross: center
+    );
+
+    &__red {
+        color: red;
+    }
+
+    &__black {
+        color: black;
+    }
+
+    &__suit {
+        font-size: 6rem;
+    }
+
+    &__rank {
+        font-size: 2rem;
+        align-self: flex-start;
+    }
+
+    &__menu {
+        margin-top: 4rem !important;
+        list-style: none;
+        @include container;
+    }
+
+    &__item {
+        margin: 0 2rem;
+        text-align: center;
+    }
+
+    &__link {
+        font-size: 2rem;
+        font-family: $title-font;
+        text-decoration: none;
+    }
+}
+
+header > .card {
+    margin: 0 auto;
+}
+
+.player__number {
+    text-align: center;
+}

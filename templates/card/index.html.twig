@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Card Game Menu{% endblock %}
+
+{% block header %}
+    <header>
+        <h1 class="header__title">Card Menu</h1>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <ul class="card__menu">
+        <li class="card__item"><a href="{{ path('deck') }}" class="card__link">Card Deck</a></li>
+        <li class="card__item"><a href="{{ path('deck2') }}" class="card__link">Card Deck with Jokers</a></li>
+        <li class="card__item"><a href="{{ path('shuffle') }}" class="card__link">Card Shuffle</a></li>
+        <li class="card__item"><a href="{{ path('draw') }}" class="card__link">Draw One Card</a></li>
+        <li class="card__item"><a href="{{ path('draw_many', {number: 5}) }}" class="card__link">Draw Multiple Cards</a></li>
+        {# Bug with players and cards giving wrong parameter BUG #}
+        <li class="card__item"><a href="{{ path('deal', {players: 4, cards: 3}) }}" class="card__link">Deal Cards</a></li>
+    </ul>
+
+
+{% endblock %}

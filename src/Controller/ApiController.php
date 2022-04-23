@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -22,6 +23,8 @@ class ApiController extends AbstractController
         $cardDeck->setEncodingOptions( $cardDeck->getEncodingOptions() | JSON_UNESCAPED_UNICODE);
         return $cardDeck;
     }
+
+ 
 
     #[Route('card/api/deck/shuffle', name: 'api_shuffle')]
     public function api_shuffle(): Response

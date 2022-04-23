@@ -25,5 +25,10 @@ class Card
         return "$this->rank";
     }
 
+    public function getValue()
+    {
+        return "$this->value";
+    }
+
 
 }

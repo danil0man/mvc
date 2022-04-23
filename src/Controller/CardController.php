@@ -98,22 +98,20 @@ class CardController extends AbstractController
     }
 
     #[Route('card/deck/deal/:{players}/:{cards}', name: 'deal')]
-    public function deal($cards, $players): Response
+    public function deal($players, $cards): Response
     {
         $cardArray = [];
-        $nrOfCards = $players * $cards;
-
         $deck = new \App\Card\CardDeck();
+        $dealer = new \App\Card\Dealer($cards, $players);
         $deck->createCardDeck();
         $deck->shuffleDeck();
-        
-        
-        for ($i = 0; $i < $nrOfCards; $i++) { 
+
+        for ($i = 0; $i < $dealer->getNrOfCards(); $i++) { 
             array_push($cardArray, $deck->drawCard());
         }
 
         $data = [
-            'cards' => array_chunk($cardArray, $players),
+            'cards' => $dealer->dealToPlayers($cardArray),
             'cardDeck' => $deck->show()
         ];
         return $this->render('card/deal.html.twig', $data);

@@ -11,18 +11,14 @@ class Dealer {
         $this->players = $players;
         $this->cards = $cards;
         $this->nrOfCards = $players * $cards;
-        $this->cardsToDeal = [];
     }
 
-    public function cardsToDeal($deck)
-    {
-        for ($i = 0; $i < $this->nrOfCards; $i++) {
-            array_push($this->cardsToDeal, $deck);
-        }
+    public function getNrOfCards() {
+        return $this->nrOfCards;
     }
 
-    public function dealToPlayers()
+    public function dealToPlayers($cardArray)
     {
-        return array_chunk($this->cardsToDeal, $this->players);
+        return array_chunk($cardArray, $this->players);
     }
 }
